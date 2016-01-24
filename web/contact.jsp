@@ -21,6 +21,7 @@
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
+
 <jsp:include page="sections/header.jsp"/>
 
 <!--start-contact-->
@@ -30,7 +31,6 @@
             <h3>Contacte</h3>
             <div class=" col-md-12 footer-grid-contact">
                 <div class="Office Address">
-                    <h4>Adresa</h4>
                     <ul class="bottom-icons-contact">
                         <div class="clearfix"></div>
                         <li style="float: left;"><i class="fa fa-home fa-2x"></i>Moldova, Chisinau</li>
@@ -45,15 +45,30 @@
     <div class="contact-inner">
         <div class="container">
             <h4 style="margin-left: 10pt; font-size: 30pt;">Contactează-ne!</h4>
-            <form class="con col-md-5" method="post" action="ContactController">
+            <form class="con col-md-5" method="post" action="sendMessage">
+                <if test="${not empty username}">
+                    <h5>${username}</h5>
+                </if>
+                <if test="${not empty result}">
+                    <h5 style="color: #398439;">${result}</h5>
+                </if>
                 <input name="username" type="text" class="text" value="Numele Prenumele" onfocus="this.value = '';"
-                       onblur="if (this.value == '') {this.value = 'Name';}">
+                       onblur="if (this.value == '') {this.value = 'Numele Prenumele';}">
+                <if test="${not empty email}">
+                    <h5>${email}</h5>
+                </if>
                 <input name="email" type="text" class="text" value="Adresa e-mail" onfocus="this.value = '';"
-                       onblur="if (this.value == '') {this.value = 'Email Address';}">
+                       onblur="if (this.value == '') {this.value = 'Adresa e-mail';}">
+                <if test="${not empty subject}">
+                    <h5>${subject}</h5>
+                </if>
                 <input name="subject" type="text" class="text" value="Subiectul" onfocus="this.value = '';"
-                       onblur="if (this.value == '') {this.value = 'Subject';}">
+                       onblur="if (this.value == '') {this.value = 'Subiectul';}">
+                <if test="${not empty message}">
+                    <h5>${message}</h5>
+                </if>
                 <textarea name="message" value="Mesajul" onfocus="this.value = '';"
-                          onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+                          onblur="if (this.value == '') {this.value = 'Mesajul';}">Mesajul</textarea>
                 <div class="clearfix"></div>
                 <div class="sub-button">
                     <input name="submit" type="submit" value="Trimite" style="width: 95%">

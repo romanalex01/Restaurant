@@ -1,80 +1,58 @@
 package model;
 
 public class Food {
-	
-	private String title;
+
 	private String name;
-	private String imageUrl;
+	private String title;
 	private float calories;
 	private float price;
 	private String type;
-	
-	
-	public Food() {
-		// TODO Auto-generated constructor stub
-		this.title = "";
-		this.name = "";
-		this.imageUrl = "";
-		this.calories = (float)0;
-		this.price = (float)0;
-		this.type = "";
-	}
-	
-	public Food(String title, String name, String imageUrl, float calories, float price, String type) {
-		// TODO Auto-generated constructor stub
-		this.title = title;
+
+	public Food(String name, String title, float calories, float price, String type) {
 		this.name = name;
-		this.imageUrl = imageUrl;
+		this.title = title;
 		this.calories = calories;
 		this.price = price;
 		this.type = type;
 	}
-	
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
-	}
-	
-	public void setCalories(float calories) {
-		this.calories = calories;
-	}
-	
-	public void setPrice(float price) {
-		this.price = price;
-	}
-	
-	public void setType(String type) {
-		this.type = type;
-	}
-	
-	public String getTitle() {
-		return title;
-	}
-	
+
 	public String getName() {
 		return name;
 	}
-	
-	public String getImageUrl() {
-		return imageUrl;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	public float getCalories() {
 		return calories;
 	}
-	
+
+	public void setCalories(float calories) {
+		this.calories = calories;
+	}
+
 	public float getPrice() {
 		return price;
 	}
-	
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
+
 	public String getType() {
 		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 }

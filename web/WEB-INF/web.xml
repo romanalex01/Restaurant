@@ -7,4 +7,15 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+
+    <servlet>
+        <servlet-name>sendMessage</servlet-name>
+        <servlet-class>controller.MessageController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>sendMessage</servlet-name>
+        <url-pattern>/sendMessage</url-pattern>
+    </servlet-mapping>
+
 </web-app>

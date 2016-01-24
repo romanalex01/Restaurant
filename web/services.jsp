@@ -63,7 +63,7 @@
                         <% for (Food food : FoodController.getFoods()) { %>
                         <div class="col-md-3 menu-grid" style="margin-top: 20px; margin-bottom: 20px;">
                             <div style="font-size: 14px; margin-bottom: 5px; text-align: center;"><%=food.getTitle()%></div>
-                            <img src="../images/foods/<%=food.getImageUrl()%>.jpg" class="img-responsive-element" alt="" />
+                            <img src="../images/foods/<%=food.getName()%>.jpg" class="img-responsive-element" alt="" />
                             <div class="calories">
                                 <span><%=food.getCalories()%> Kcal</span>
                             </div>
